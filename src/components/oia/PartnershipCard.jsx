@@ -54,7 +54,7 @@ const PartnershipCard = ({ partnership }) => {
         <div className="flex items-center gap-2">
           <Link
             to={`/global-partnerships/${partnership.id}`}
-            className="inline-flex items-center gap-2 text-[#283887] hover:text-[#A21D2E] font-medium text-sm transition-colors"
+            className="inline-flex items-center gap-2 text-[#283887] hover:text-[#A21D2E] font-medium text-sm transition-colors" onClick={() => sessionStorage.setItem(`title-${partnership.id}`, partnership.partnerName)}
           >
             View details
             <ArrowRight className="h-4 w-4" />

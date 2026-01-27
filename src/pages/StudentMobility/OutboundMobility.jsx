@@ -49,7 +49,7 @@ const OutboundMobility = () => {
                         {program.deadline}
                       </div>
                     </div>
-                    <Button asChild className="w-full">
+                    <Button asChild className="w-full" onClick={() => sessionStorage.setItem(`title-${program.id}`, program.title)}>
                       <Link to={`/program/${program.id}`}>View Details</Link>
                     </Button>
                   </CardContent>

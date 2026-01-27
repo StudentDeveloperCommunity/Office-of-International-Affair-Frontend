@@ -280,7 +280,7 @@ const Home = () => {
                           
                           <div className="space-y-2">
                             <Link to={`/program/${program.id}`}>
-                              <Button className="w-full bg-[#283887] hover:bg-[#283887]/90 text-white">
+                              <Button className="w-full bg-[#283887] hover:bg-[#283887]/90 text-white" onClick={() => sessionStorage.setItem(`program-title-${program.id}`, program.title)}>
                                 View Details
                                 <ArrowRight className="h-4 w-4 ml-2" />
                               </Button>

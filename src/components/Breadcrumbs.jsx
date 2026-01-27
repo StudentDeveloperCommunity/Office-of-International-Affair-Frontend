@@ -39,8 +39,8 @@ const Breadcrumbs = () => {
   }
 
   const isLikelyId = (value) => {
-  return /^[a-f0-9-]{16,}$/i.test(value);
-};
+    return /^[a-f0-9-]{16,}$/i.test(value);
+  };
 
   return (
     <nav aria-label="Breadcrumb" className="bg-slate-50 border-b border-slate-200">
@@ -56,18 +56,22 @@ const Breadcrumbs = () => {
             </Link>
           </li>
           {pathnames.map((name, index) => {
-            if (isLikelyId(name)) return null;
-            
-            const routeTo = `/${pathnames.slice(0, index + 1).join('/')}`;
+            const routeTo = name === 'program'
+              ? '/programs'
+              : `/${pathnames.slice(0, index + 1).join('/')}`;
+
             const isLast = index === pathnames.length - 1;
             const displayName = routeNames[name] || name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ');
+            const finalName = pathnames[index - 1] === 'program'
+              ? sessionStorage.getItem(`title-${name}`) || name
+              : displayName;
 
             return (
               <li key={name} className="flex items-center">
                 <ChevronRight className="h-4 w-4 text-slate-400 mx-2" />
                 {isLast ? (
                   <span className="text-medicaps-blue font-medium" aria-current="page">
-                    {displayName}
+                    {finalName}
                   </span>
                 ) : (
                   <Link
