@@ -390,7 +390,7 @@ const Home = () => {
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-4xl font-bold text-slate-900 mb-6">
-                Why Choose Medi-Caps International Programs?
+                Why Choose Medicaps International Programs?
               </h2>
               <p className="text-xl text-slate-600 max-w-3xl mx-auto">
                 25 years of academic excellence, trusted partnerships, and a commitment to student success.

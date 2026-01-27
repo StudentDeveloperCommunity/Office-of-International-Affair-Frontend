@@ -102,7 +102,7 @@ const LORSupport = () => {
               <Card>
                 <CardHeader>
                   <CardTitle>Student Information</CardTitle>
-                  <CardDescription>Your details as a Medi-Caps student</CardDescription>
+                  <CardDescription>Your details as a Medicaps student</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">

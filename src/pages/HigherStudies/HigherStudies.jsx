@@ -8,12 +8,6 @@ import { GraduationCap, DollarSign, FileText, Calculator, Users } from 'lucide-r
 const HigherStudies = () => {
   const sections = [
     {
-      title: 'Study Abroad Guidance',
-      description: 'Comprehensive guidance for pursuing higher studies abroad',
-      href: '/higher-studies-opportunities',
-      icon: GraduationCap,
-    },
-    {
       title: 'Scholarships',
       description: 'Explore scholarship opportunities for international studies',
       href: '/higher-studies-opportunities/scholarships',

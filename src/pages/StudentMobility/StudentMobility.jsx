@@ -22,7 +22,7 @@ const StudentMobility = () => {
               <CardHeader>
                 <Plane className="h-8 w-8 text-[#283887] mb-2" />
                 <CardTitle>Outbound Programs</CardTitle>
-                <CardDescription>Study abroad opportunities for Medi-Caps students</CardDescription>
+                <CardDescription>Study abroad opportunities for Medicaps students</CardDescription>
               </CardHeader>
               <CardContent>
                 <Button asChild>

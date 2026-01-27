@@ -62,7 +62,7 @@ const InternationalAdmissions = () => {
             </p>
           </div>
 
-          {/* Why Medi-Caps Section */}
+          {/* Why Medicaps Section */}
           <div className="bg-white rounded-lg shadow-sm p-8 mb-12">
             <h2 className="text-3xl font-bold text-[#283887] mb-6">Why Choose Medicaps University?</h2>
             {whyMediCaps ? (

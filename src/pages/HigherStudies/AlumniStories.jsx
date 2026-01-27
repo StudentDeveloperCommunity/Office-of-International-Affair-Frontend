@@ -10,7 +10,7 @@ const AlumniStories = () => {
     <>
       <Helmet>
         <title>Alumni Stories | Higher Studies & Global Opportunities - OIA</title>
-        <meta name="description" content="Success stories from Medi-Caps alumni who pursued higher studies at prestigious universities worldwide." />
+        <meta name="description" content="Success stories from Medicaps alumni who pursued higher studies at prestigious universities worldwide." />
       </Helmet>
 
       <div className="min-h-screen bg-slate-50 py-12">
@@ -18,7 +18,7 @@ const AlumniStories = () => {
           <div className="mb-12 text-center">
             <h1 className="text-4xl font-bold text-[#283887] mb-4">Alumni Success Stories</h1>
             <p className="text-xl text-slate-600 max-w-3xl mx-auto">
-              Discover how Medi-Caps alumni are making their mark at top universities around the world.
+              Discover how Medicaps alumni are making their mark at top universities around the world.
             </p>
           </div>
 
@@ -34,21 +34,21 @@ const AlumniStories = () => {
                   program: 'MS in Computer Science',
                   university: 'Stanford University, USA',
                   year: '2023',
-                  quote: 'Medi-Caps provided me with a strong foundation that prepared me for graduate studies at Stanford. The international programs and research opportunities were invaluable.',
+                  quote: 'Medicaps provided me with a strong foundation that prepared me for graduate studies at Stanford. The international programs and research opportunities were invaluable.',
                 },
                 {
                   name: 'Rajesh Kumar',
                   program: 'MBA',
                   university: 'London Business School, UK',
                   year: '2022',
-                  quote: 'The global perspective I gained through exchange programs at Medi-Caps helped me excel in my MBA program. The OIA team\'s support was exceptional.',
+                  quote: 'The global perspective I gained through exchange programs at Medicaps helped me excel in my MBA program. The OIA team\'s support was exceptional.',
                 },
                 {
                   name: 'Anita Patel',
                   program: 'PhD in Engineering',
                   university: 'ETH Zurich, Switzerland',
                   year: '2024',
-                  quote: 'The research collaboration opportunities and faculty guidance at Medi-Caps were crucial in my journey to pursuing a PhD at ETH Zurich.',
+                  quote: 'The research collaboration opportunities and faculty guidance at Medicaps were crucial in my journey to pursuing a PhD at ETH Zurich.',
                 },
               ].map((alumni, idx) => (
                 <Card key={idx} className="hover:shadow-lg transition-shadow">
@@ -81,7 +81,7 @@ const AlumniStories = () => {
             <CardContent className="pt-6 text-center">
               <h3 className="text-2xl font-bold mb-2">Share Your Story</h3>
               <p className="text-white/90 mb-4">
-                Are you a Medi-Caps alumnus studying abroad? We'd love to feature your success story!
+                Are you a Medicaps alumnus studying abroad? We'd love to feature your success story!
               </p>
               <a href="/contact" className="inline-block px-6 py-3 bg-white text-[#283887] rounded-lg font-medium hover:bg-slate-100 transition-colors">
                 Contact Us

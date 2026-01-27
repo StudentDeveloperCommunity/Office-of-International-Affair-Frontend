@@ -85,7 +85,7 @@ const ProgramDetail = () => {
       },
       
       scholarships: program.scholarships && program.scholarships.length > 0 ? program.scholarships : [
-        "Medi-Caps Merit Scholarship: Up to 50% tuition fee waiver for top performers",
+        "Medicaps Merit Scholarship: Up to 50% tuition fee waiver for top performers",
         "International Exchange Grant: ₹1,00,000 financial assistance for eligible students",
         "Need-based Support: Financial aid based on family income criteria"
       ],

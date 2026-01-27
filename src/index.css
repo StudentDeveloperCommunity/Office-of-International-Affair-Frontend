@@ -10,6 +10,7 @@ body {
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 code {
@@ -17,7 +18,7 @@ code {
         monospace;
 }
 
-/* Medi-Caps Brand Colors */
+/* Medicaps Brand Colors */
 :root {
     --medicaps-blue: #283887;
     --medicaps-red: #A21D2E;
@@ -91,7 +92,7 @@ code {
     }
 }
 
-/* Medi-Caps Brand Utilities */
+/* Medicaps Brand Utilities */
 .medicaps-blue {
   color: var(--medicaps-blue);
 }
