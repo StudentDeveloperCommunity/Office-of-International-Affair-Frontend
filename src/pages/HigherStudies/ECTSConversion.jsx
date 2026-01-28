@@ -101,6 +101,7 @@ const ECTSConversion = () => {
                     placeholder="Enter credits"
                     min="0"
                     step="0.5"
+                    max="1000"
                   />
                 </div>
 

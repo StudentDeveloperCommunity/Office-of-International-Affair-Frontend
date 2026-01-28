@@ -11,6 +11,18 @@ import remarkGfm from 'remark-gfm';
 const InternationalAdmissions = () => {
   const { data: whyMediCaps } = useStaticContentByKey('why_medicaps');
 
+  const customMarkdownComponents = {
+    h1: ({node, ...props}) => (
+      <h3 className="text-lg font-bold text-medicaps-blue mt-4 mb-2" {...props} />
+    ),
+    ul: ({node, ...props}) => (
+      <ul className="list-disc list-inside ml-2 space-y-1 text-slate-700" {...props} />
+    ),
+    li: ({node, ...props}) => (
+      <li className="text-slate-700" {...props} />
+    ),
+  };
+
   const sections = [
     {
       title: 'Programs Offered',
@@ -63,11 +75,12 @@ const InternationalAdmissions = () => {
           </div>
 
           {/* Why Medicaps Section */}
-          <div className="bg-white rounded-lg shadow-sm p-8 mb-12">
+          <div className="bg-white rounded-2xl shadow-md p-10 mb-14">
             <h2 className="text-3xl font-bold text-[#283887] mb-6">Why Choose Medicaps University?</h2>
+            <div className="h-1 w-16 bg-[#283887] rounded-full mb-6" />
             {whyMediCaps ? (
-              <div className="prose prose-slate max-w-none">
-                <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              <div className="leading-relaxed">
+                <ReactMarkdown remarkPlugins={[remarkGfm]} components={customMarkdownComponents}>
                   {whyMediCaps.content}
                 </ReactMarkdown>
               </div>
@@ -76,7 +89,7 @@ const InternationalAdmissions = () => {
                 {highlights.map((highlight, idx) => {
                   const Icon = highlight.icon;
                   return (
-                    <div key={idx} className="flex items-start gap-3">
+                    <div key={idx} className="flex items-start gap-4 p-4 rounded-lg bg-slate-50 hover:bg-slate-100 transition">
                       <Icon className="h-6 w-6 text-[#283887] mt-1 shrink-0" />
                       <p className="text-slate-700">{highlight.text}</p>
                     </div>
@@ -91,13 +104,13 @@ const InternationalAdmissions = () => {
             {sections.map((section) => {
               const Icon = section.icon;
               return (
-                <Card key={section.href} className="hover:shadow-lg transition-shadow">
+                <Card key={section.href} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
                   <CardHeader>
-                    <Icon className="h-10 w-10 text-[#283887] mb-3" />
+                    <Icon className="h-10 w-10 text-[#283887] mb-4" />
                     <CardTitle>{section.title}</CardTitle>
                     <CardDescription>{section.description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="mt-auto">
                     <Button asChild variant="outline" className="w-full">
                       <Link to={section.href}>Learn More</Link>
                     </Button>
@@ -108,17 +121,17 @@ const InternationalAdmissions = () => {
           </div>
 
           {/* Application CTA */}
-          <div className="bg-gradient-to-r from-[#283887] to-[#A21D2E] rounded-lg p-8 text-white text-center">
-            <h2 className="text-3xl font-bold mb-4">Ready to Apply?</h2>
+          <div className="bg-gradient-to-r from-[#283887] to-[#A21D2E] rounded-2xl p-12 text-white text-center shadow-lg">
+            <h2 className="text-4xl font-bold mb-4">Ready to Apply?</h2>
             <p className="text-white/90 mb-6 text-lg">
               Start your journey at Medicaps University today. Our admissions team is here to help you every step of the way.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-5 justify-center">
               <Button asChild size="lg" className="bg-white text-[#283887] hover:bg-slate-100">
                 <Link to="/international-admissions/process">View Admission Process</Link>
               </Button>
               <Button asChild size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                <Link to="/contact">Contact Admissions</Link>
+                <Link to="/contact">Contact Admissions Team</Link>
               </Button>
             </div>
           </div>

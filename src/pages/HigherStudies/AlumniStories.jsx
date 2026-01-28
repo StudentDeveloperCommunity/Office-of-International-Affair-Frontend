@@ -2,8 +2,32 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 import { GraduationCap, MapPin, Quote } from 'lucide-react';
 import { Card, CardContent } from '../../components/ui/card';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '../../components/ui/carousel';
 import Testimonials from '../../components/Testimonials';
+
+
+const FEATURED_ALUMNI = [
+  {
+    name: 'Priya Sharma',
+    program: 'MS in Computer Science',
+    university: 'Stanford University, USA',
+    year: '2023',
+    quote: 'Medicaps provided me with a strong foundation that prepared me for graduate studies at Stanford. The international programs and research opportunities were invaluable.',
+  },
+  {
+    name: 'Rajesh Kumar',
+    program: 'MBA',
+    university: 'London Business School, UK',
+    year: '2022',
+    quote: 'The global perspective I gained through exchange programs at Medicaps helped me excel in my MBA program. The OIA team\'s support was exceptional.',
+  },
+  {
+    name: 'Anita Patel',
+    program: 'PhD in Engineering',
+    university: 'ETH Zurich, Switzerland',
+    year: '2024',
+    quote: 'The research collaboration opportunities and faculty guidance at Medicaps were crucial in my journey to pursuing a PhD at ETH Zurich.',
+  },
+];
 
 const AlumniStories = () => {
   return (
@@ -28,29 +52,7 @@ const AlumniStories = () => {
           <div className="mt-12">
             <h2 className="text-2xl font-bold text-[#283887] mb-6">Featured Alumni</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {[
-                {
-                  name: 'Priya Sharma',
-                  program: 'MS in Computer Science',
-                  university: 'Stanford University, USA',
-                  year: '2023',
-                  quote: 'Medicaps provided me with a strong foundation that prepared me for graduate studies at Stanford. The international programs and research opportunities were invaluable.',
-                },
-                {
-                  name: 'Rajesh Kumar',
-                  program: 'MBA',
-                  university: 'London Business School, UK',
-                  year: '2022',
-                  quote: 'The global perspective I gained through exchange programs at Medicaps helped me excel in my MBA program. The OIA team\'s support was exceptional.',
-                },
-                {
-                  name: 'Anita Patel',
-                  program: 'PhD in Engineering',
-                  university: 'ETH Zurich, Switzerland',
-                  year: '2024',
-                  quote: 'The research collaboration opportunities and faculty guidance at Medicaps were crucial in my journey to pursuing a PhD at ETH Zurich.',
-                },
-              ].map((alumni, idx) => (
+              {FEATURED_ALUMNI.map((alumni, idx) => (
                 <Card key={idx} className="hover:shadow-lg transition-shadow">
                   <CardContent className="pt-6">
                     <div className="flex items-start gap-3 mb-4">
@@ -83,7 +85,7 @@ const AlumniStories = () => {
               <p className="text-white/90 mb-4">
                 Are you a Medicaps alumnus studying abroad? We'd love to feature your success story!
               </p>
-              <a href="/contact" className="inline-block px-6 py-3 bg-white text-[#283887] rounded-lg font-medium hover:bg-slate-100 transition-colors">
+              <a href="/contact" aria-label='Contact OIA to share Alumni success story' className="inline-block px-6 py-3 bg-white text-[#283887] rounded-lg font-medium hover:bg-slate-100 transition-colors">
                 Contact Us
               </a>
             </CardContent>
