@@ -62,9 +62,8 @@ const Breadcrumbs = () => {
 
             const isLast = index === pathnames.length - 1;
             const displayName = routeNames[name] || name.charAt(0).toUpperCase() + name.slice(1).replace(/-/g, ' ');
-            const finalName = pathnames[index - 1] === 'program'
-              ? sessionStorage.getItem(`title-${name}`) || name
-              : displayName;
+            const storedTitle = sessionStorage.getItem(`title-${name}`);
+            const finalName = storedTitle || displayName;
 
             return (
               <li key={name} className="flex items-center">
