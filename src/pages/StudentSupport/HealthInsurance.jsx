@@ -79,7 +79,7 @@ const HealthInsurance = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-slate-600 text-sm mb-4">
-                  Medi-Caps has a fully equipped medical center with qualified doctors available 
+                  Medicaps has a fully equipped medical center with qualified doctors available 
                   during office hours. Emergency services are available 24/7.
                 </p>
                 <div className="text-sm text-slate-600">

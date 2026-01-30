@@ -653,7 +653,7 @@ Health Requirements: Medical clearance and insurance coverage"
                   rows={4}
                   value={getArrayAsText(formData.scholarships)}
                   onChange={(e) => handleArrayChange('scholarships', e.target.value)}
-                  placeholder={`Medi-Caps Merit Scholarship: Up to 50% tuition fee waiver
+                  placeholder={`Medicaps Merit Scholarship: Up to 50% tuition fee waiver
 International Exchange Grant: ₹1,00,000 financial assistance
 Need-based Support: Financial aid based on family income`}
                   disabled={submitting}

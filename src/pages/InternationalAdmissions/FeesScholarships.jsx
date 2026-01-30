@@ -4,6 +4,7 @@ import { DollarSign, Award } from 'lucide-react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '../../components/ui/table';
 import { Badge } from '../../components/ui/badge';
+import { Link } from 'react-router-dom';
 
 const FeesScholarships = () => {
   const fees = [
@@ -118,9 +119,9 @@ const FeesScholarships = () => {
                 We offer various financial aid options to make quality education accessible. 
                 Contact our admissions office to learn more about scholarship applications.
               </p>
-              <a href="/contact" className="inline-block px-6 py-3 bg-white text-[#283887] rounded-lg font-medium hover:bg-slate-100 transition-colors">
+              <Link to="/contact" className="inline-block px-6 py-3 bg-white text-[#283887] rounded-lg font-medium hover:bg-slate-100 transition-colors">
                 Contact Admissions
-              </a>
+              </Link>
             </CardContent>
           </Card>
         </div>

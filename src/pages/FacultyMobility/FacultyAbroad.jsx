@@ -36,7 +36,7 @@ const FacultyAbroad = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <h1 className="text-4xl font-bold text-[#283887] mb-4">Faculty Abroad Opportunities</h1>
           <p className="text-xl text-slate-600 mb-12">
-            Explore opportunities for Medi-Caps faculty to teach and conduct research at international institutions.
+            Explore opportunities for Medicaps faculty to teach and conduct research at international institutions.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">

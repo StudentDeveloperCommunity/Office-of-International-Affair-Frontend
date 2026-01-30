@@ -33,7 +33,7 @@ const Scholarships = () => {
       country: 'Australia',
       amount: 'Full funding',
       deadline: '2025-04-30',
-      link: 'https://australiaawards.gov.au',
+      link: 'https://australiaawards.com.au/',
     },
     {
       name: 'DAAD Scholarship',

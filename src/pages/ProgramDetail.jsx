@@ -85,7 +85,7 @@ const ProgramDetail = () => {
       },
       
       scholarships: program.scholarships && program.scholarships.length > 0 ? program.scholarships : [
-        "Medi-Caps Merit Scholarship: Up to 50% tuition fee waiver for top performers",
+        "Medicaps Merit Scholarship: Up to 50% tuition fee waiver for top performers",
         "International Exchange Grant: ₹1,00,000 financial assistance for eligible students",
         "Need-based Support: Financial aid based on family income criteria"
       ],
@@ -232,7 +232,7 @@ const ProgramDetail = () => {
                     <div className="text-center">
                       <Users className="h-8 w-8 text-medicaps-blue mx-auto mb-2" />
                       <div className="text-sm font-medium text-slate-900">Eligibility</div>
-                      <div className="text-sm text-slate-600">View Details</div>
+                      <div className="text-sm text-slate-600" onClick={()=>sessionStorage.setItem(`title-${program.id}`, program.title)}>View Details</div>
                     </div>
                     <div className="text-center">
                       <Globe className="h-8 w-8 text-medicaps-red mx-auto mb-2" />

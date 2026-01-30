@@ -1,4 +1,4 @@
-/* Custom styling for Medi-Caps Exchange Programs website */
+/* Custom styling for Medicaps Exchange Programs website */
 
 .App-logo {
     height: 40vmin;
@@ -68,7 +68,7 @@ html {
     outline-offset: 2px;
 }
 
-/* Academic color palette based on Medi-Caps branding */
+/* Academic color palette based on Medicaps branding */
 :root {
     --medicaps-blue: #2563eb;
     --medicaps-dark-blue: #1d4ed8;

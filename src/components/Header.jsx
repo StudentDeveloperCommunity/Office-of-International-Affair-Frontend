@@ -97,7 +97,7 @@ const Header = () => {
       href: '/international-admissions',
       hasDropdown: true,
       dropdownItems: [
-        { name: 'Why Medi-Caps', href: '/international-admissions' },
+        { name: 'Why Medicaps', href: '/international-admissions' },
         { name: 'Programs Offered', href: '/international-admissions/programs' },
         { name: 'Admission Process', href: '/international-admissions/process' },
         { name: 'Fees & Scholarships', href: '/international-admissions/fees' },

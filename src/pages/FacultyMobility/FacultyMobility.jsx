@@ -9,7 +9,7 @@ const FacultyMobility = () => {
   const sections = [
     {
       title: 'Visiting Faculty',
-      description: 'Opportunities for international faculty to visit and teach at Medi-Caps',
+      description: 'Opportunities for international faculty to visit and teach at Medicaps',
       href: '/faculty-mobility-research/visiting',
       icon: GraduationCap,
       color: 'text-blue-600',
@@ -33,7 +33,7 @@ const FacultyMobility = () => {
     },
     {
       title: 'Faculty Abroad',
-      description: 'Programs for Medi-Caps faculty to teach and research internationally',
+      description: 'Programs for Medicaps faculty to teach and research internationally',
       href: '/faculty-mobility-research/abroad',
       icon: Plane,
       color: 'text-purple-600',

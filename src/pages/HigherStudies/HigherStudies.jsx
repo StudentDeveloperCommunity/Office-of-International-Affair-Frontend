@@ -3,16 +3,10 @@ import { Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '../../components/ui/card';
 import { Button } from '../../components/ui/button';
-import { GraduationCap, DollarSign, FileText, Calculator, Users } from 'lucide-react';
+import { DollarSign, FileText, Calculator, Users } from 'lucide-react';
 
 const HigherStudies = () => {
   const sections = [
-    {
-      title: 'Study Abroad Guidance',
-      description: 'Comprehensive guidance for pursuing higher studies abroad',
-      href: '/higher-studies-opportunities',
-      icon: GraduationCap,
-    },
     {
       title: 'Scholarships',
       description: 'Explore scholarship opportunities for international studies',
@@ -56,17 +50,17 @@ const HigherStudies = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
             {sections.map((section) => {
               const Icon = section.icon;
               return (
-                <Card key={section.href} className="hover:shadow-lg transition-shadow">
+                <Card key={section.href} className="group hover:shadow-xl transition-all duration-300 hover:-translate-y-1 flex flex-col justify-between">
                   <CardHeader>
                     <Icon className="h-10 w-10 text-[#283887] mb-3" />
                     <CardTitle>{section.title}</CardTitle>
                     <CardDescription>{section.description}</CardDescription>
                   </CardHeader>
-                  <CardContent>
+                  <CardContent className="mt-auto">
                     <Button asChild variant="outline" className="w-full">
                       <Link to={section.href}>Explore</Link>
                     </Button>
@@ -82,38 +76,38 @@ const HigherStudies = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
                 <h3 className="font-semibold text-slate-900 mb-3">Application Support</h3>
-                <ul className="space-y-2 text-slate-600 text-sm">
-                  <li>• University selection guidance</li>
-                  <li>• Application form assistance</li>
-                  <li>• Statement of Purpose (SOP) review</li>
-                  <li>• Resume/CV preparation</li>
+                <ul className="list-disc list-inside space-y-2 text-slate-600 text-sm">
+                  <li>University selection guidance</li>
+                  <li>Application form assistance</li>
+                  <li>Statement of Purpose (SOP) review</li>
+                  <li>Resume/CV preparation</li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-semibold text-slate-900 mb-3">Documentation</h3>
-                <ul className="space-y-2 text-slate-600 text-sm">
-                  <li>• Letter of Recommendation (LOR) support</li>
-                  <li>• Transcript preparation</li>
-                  <li>• Document verification</li>
-                  <li>• ECTS credit conversion</li>
+                <ul className="list-disc list-inside space-y-2 text-slate-600 text-sm">
+                  <li>Letter of Recommendation (LOR) support</li>
+                  <li>Transcript preparation</li>
+                  <li>Document verification</li>
+                  <li>ECTS credit conversion</li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-semibold text-slate-900 mb-3">Financial Aid</h3>
-                <ul className="space-y-2 text-slate-600 text-sm">
-                  <li>• Scholarship information</li>
-                  <li>• Financial aid guidance</li>
-                  <li>• Loan application support</li>
-                  <li>• Funding opportunities</li>
+                <ul className="list-disc list-inside space-y-2 text-slate-600 text-sm">
+                  <li>Scholarship information</li>
+                  <li>Financial aid guidance</li>
+                  <li>Loan application support</li>
+                  <li>Funding opportunities</li>
                 </ul>
               </div>
               <div>
                 <h3 className="font-semibold text-slate-900 mb-3">Post-Admission</h3>
-                <ul className="space-y-2 text-slate-600 text-sm">
-                  <li>• Visa application guidance</li>
-                  <li>• Pre-departure orientation</li>
-                  <li>• Alumni network access</li>
-                  <li>• Ongoing support</li>
+                <ul className="list-disc list-inside space-y-2 text-slate-600 text-sm">
+                  <li>Visa application guidance</li>
+                  <li>Pre-departure orientation</li>
+                  <li>Alumni network access</li>
+                  <li>Ongoing support</li>
                 </ul>
               </div>
             </div>

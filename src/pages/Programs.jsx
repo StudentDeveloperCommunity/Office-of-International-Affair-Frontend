@@ -229,8 +229,8 @@ const Programs = () => {
                         to={`/program/${program.id}`}
                         className="flex-1"
                       >
-                        <Button variant="outline" size="lg" className="w-full border-medicaps-blue text-medicaps-blue hover:bg-blue-400 hover:text-white">
-                          <BookOpen className="h-4 w-4 mr-2" />
+                        <Button variant="outline" size="lg" className="w-full border-medicaps-blue text-medicaps-blue hover:bg-blue-400 hover:text-white" onClick={()=>sessionStorage.setItem(`title-${program.id}`, program.title)}>
+                          <BookOpen className="h-4 w-4 mr-2"/>
                           View Details
                         </Button>
                       </Link>

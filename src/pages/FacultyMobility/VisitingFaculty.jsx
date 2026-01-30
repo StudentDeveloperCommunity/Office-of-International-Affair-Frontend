@@ -15,7 +15,7 @@ const VisitingFaculty = () => {
   ];
 
   const benefits = [
-    'Access to Medi-Caps research facilities',
+    'Access to Medicaps research facilities',
     'Collaboration with local faculty',
     'Stipend and accommodation support',
     'Cultural immersion experience',

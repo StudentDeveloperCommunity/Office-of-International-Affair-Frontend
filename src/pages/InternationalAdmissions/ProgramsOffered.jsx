@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet-async';
 import { GraduationCap } from 'lucide-react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '../../components/ui/accordion';
 import { Card, CardContent, CardHeader, CardTitle } from '../../components/ui/card';
+import { Link } from 'react-router-dom';
 
 const ProgramsOffered = () => {
   const programs = [
@@ -98,9 +99,16 @@ const ProgramsOffered = () => {
             <CardContent className="pt-6">
               <h3 className="font-semibold text-blue-900 mb-2">Program Details</h3>
               <p className="text-blue-800 text-sm">
-                For detailed information about specific programs, admission requirements, and curriculum, 
-                please contact the admissions office or visit the university website.
+                For detailed information about specific programs, admission requirements, and curriculum,
+                please contact the{' '}
+                <Link to="/contact" className="underline font-medium hover:text-blue-900">
+                  admissions office
+                </Link> or visit the{' '}
+                <a
+                  href="https://www.medicaps.ac.in/" target="_blank" rel="noopener noreferrer" className="underline font-medium hover:text-blue-900">
+                    university website</a>.
               </p>
+
             </CardContent>
           </Card>
         </div>

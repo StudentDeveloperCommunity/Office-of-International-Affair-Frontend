@@ -77,7 +77,7 @@ const EventCard = ({ event }) => {
         </p>
         <Link
           to={`/visits-delegations-events/${event.id}`}
-          className="inline-flex items-center gap-2 text-[#283887] hover:text-[#A21D2E] font-medium text-sm transition-colors"
+          className="inline-flex items-center gap-2 text-medicaps-blue hover:text-medicaps-red font-medium text-sm transition-colors" onClick={() => sessionStorage.setItem(`title-${event.id}`, event.title)}
         >
           View details
           <ArrowRight className="h-4 w-4" />
