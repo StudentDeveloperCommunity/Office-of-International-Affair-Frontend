@@ -8,6 +8,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '.
 import { Input } from '../../components/ui/input';
 import { Helmet } from 'react-helmet-async';
 
+
 const GlobalPartnerships = () => {
   const [searchParams, setSearchParams] = useSearchParams();
   const [type, setType] = useState(searchParams.get('type') || 'all');
@@ -116,13 +117,15 @@ const GlobalPartnerships = () => {
                 ))}
               </SelectContent>
             </Select>
-            <Input
-              type="text"
-              placeholder="Filter by country..."
-              value={country}
-              onChange={handleCountryChange}
-              className="w-[200px]"
-            />
+            <div>
+              <Input
+                type="text"
+                placeholder="Filter by country..."
+                value={country}
+                onChange={handleCountryChange}
+                className="w-[200px]"
+              />
+            </div>
           </div>
 
           {/* Partnerships Grid */}

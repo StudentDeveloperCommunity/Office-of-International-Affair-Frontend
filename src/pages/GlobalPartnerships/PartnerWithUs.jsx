@@ -12,10 +12,23 @@ import { Form, FormControl, FormDescription, FormField, FormItem, FormLabel, For
 import { publicAPI } from '../../services/api';
 import { toast } from 'sonner';
 import { useNavigate } from 'react-router-dom';
+import Select from "react-select";
+
+const countries = [
+  "Afghanistan", "Albania", "Algeria", "Argentina", "Australia", "Austria",
+  "Bangladesh", "Belgium", "Brazil", "Canada", "China", "Denmark", "Egypt",
+  "Finland", "France", "Germany", "Greece", "India", "Indonesia", "Iran",
+  "Iraq", "Ireland", "Israel", "Italy", "Japan", "Kenya", "Mexico", "Nepal",
+  "Netherlands", "New Zealand", "Nigeria", "Pakistan", "Poland", "Russia",
+  "Saudi Arabia", "Singapore", "South Africa", "Spain", "Sri Lanka", "Sweden",
+  "Switzerland", "Thailand", "Turkey", "United Kingdom", "United States",
+  "Vietnam", "Zimbabwe"
+];
+const countryOptions = countries.map(c => ({ value: c, label: c }));
 
 const formSchema = z.object({
-  firstName: z.string().min(2, 'First name is required'),
-  lastName: z.string().min(2, 'Last name is required'),
+  firstName: z.string().regex(/^[A-Za-z\s]+$/).min(2, 'First name is required'),
+  lastName: z.string().regex(/^[A-Za-z\s]+$/).min(2, 'Last name is required'),
   email: z.string().email('Invalid email address'),
   phone: z.string().min(10, 'Phone number is required'),
   institution: z.string().min(1, 'Institution name is required'),
@@ -134,7 +147,22 @@ const PartnerWithUs = () => {
                       <FormItem>
                         <FormLabel>Phone Number *</FormLabel>
                         <FormControl>
-                          <Input type="tel" {...field} />
+                          <Input
+                            {...field}
+                            type="tel"
+                            value={field.value ?? ""}
+                            placeholder="Enter 10-digit phone number"
+                            maxLength={10}
+                            inputMode="numeric"
+                            pattern="[0-9]{10}"
+                            required
+                            onChange={(e) => {
+                              const value = e.target.value
+                                .replace(/\D/g, "")
+                                .slice(0, 10);
+                              field.onChange(value);
+                            }}
+                          />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
@@ -158,13 +186,19 @@ const PartnerWithUs = () => {
                       control={form.control}
                       name="country"
                       render={({ field }) => (
-                        <FormItem>
-                          <FormLabel>Country *</FormLabel>
-                          <FormControl>
-                            <Input {...field} />
-                          </FormControl>
-                          <FormMessage />
-                        </FormItem>
+                      <FormItem>
+                            <FormLabel>Country *</FormLabel>
+                            <FormControl>
+                              <Select
+                                {...field}
+                                options={countryOptions}
+                                value={countryOptions.find(option => option.value === field.value)}
+                                onChange={option => field.onChange(option.value)}   
+                                placeholder="Select a country..."
+                              />
+                            </FormControl>
+                            <FormMessage />
+                          </FormItem>
                       )}
                     />
                     <FormField

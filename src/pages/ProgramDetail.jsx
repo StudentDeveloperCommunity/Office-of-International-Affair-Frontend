@@ -205,7 +205,7 @@ const ProgramDetail = () => {
           {/* Main Content */}
           <div className="lg:col-span-2 space-y-8">
             {/* Program Overview */}
-            <Card className="border-slate-200 shadow-lg">
+            <Card className="border-slate-200 shadow-lg rounded-2xl overflow-hidden">
               <CardHeader className="bg-gradient-to-r from-medicaps-blue to-medicaps-blue/80 text-black">
                 <CardTitle className="text-2xl font-metropolis">Program Overview</CardTitle>
                 <CardDescription className="text-slate-800">
@@ -245,9 +245,9 @@ const ProgramDetail = () => {
             </Card>
 
             {/* Partner University */}
-            <Card className="border-slate-200 shadow-lg">
-              <CardHeader className="bg-gradient-to-r from-medicaps-red to-medicaps-red/80 text-white">
-                <CardTitle className="text-2xl font-metropolis flex items-center">
+            <Card className="border-slate-200 shadow-lg rounded-2xl overflow-hidden">
+              <CardHeader className="bg-gradient-to-r from-medicaps-red to-medicaps-red /80 text-white">
+                <CardTitle className="text-black font-semibold test-xl Metropolis flex items-center">
                   <GraduationCap className="h-6 w-6 mr-3" />
                   Partner University
                 </CardTitle>
@@ -281,7 +281,7 @@ const ProgramDetail = () => {
             {/* Expandable Sections */}
             <div className="space-y-4">
               {/* Purpose & Vision */}
-              <Card className="border-slate-200 shadow-lg">
+              <Card className="border-slate-200 shadow-lg rounded-2xl overflow-hidden">
                 <Collapsible open={expandedSections.purpose} onOpenChange={() => toggleSection('purpose')}>
                   <CollapsibleTrigger asChild>
                     <CardHeader className="cursor-pointer hover:bg-slate-50 transition-colors">
@@ -309,7 +309,7 @@ const ProgramDetail = () => {
               </Card>
 
               {/* Benefits for Students */}
-              <Card className="border-slate-200 shadow-lg">
+              <Card className="border-slate-200 shadow-lg rounded-2xl overflow-hidden">
                 <Collapsible open={expandedSections.benefits} onOpenChange={() => toggleSection('benefits')}>
                   <CollapsibleTrigger asChild>
                     <CardHeader className="cursor-pointer hover:bg-slate-50 transition-colors">
@@ -328,7 +328,10 @@ const ProgramDetail = () => {
                         {enhancedData.benefits.map((benefit, index) => (
                           <div key={index} className="flex items-start space-x-3 p-3 bg-slate-50 rounded-lg">
                             <div className="w-2 h-2 bg-medicaps-blue rounded-full mt-2 flex-shrink-0"></div>
-                            <span className="text-sm text-slate-700">{benefit}</span>
+                            <span className="text-sm text-slate-900">
+                              <span className="text-sm font-semibold text-black/95">{benefit.slice(0, benefit.indexOf(':')+1)}</span>{' '}
+                            {benefit.slice(benefit.indexOf(':')+1).trim()}
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -338,7 +341,7 @@ const ProgramDetail = () => {
               </Card>
 
               {/* Eligibility Criteria */}
-              <Card className="border-slate-200 shadow-lg">
+              <Card className="border-slate-200 shadow-lg rounded-2xl overflow-hidden">
                 <Collapsible open={expandedSections.eligibility} onOpenChange={() => toggleSection('eligibility')}>
                   <CollapsibleTrigger asChild>
                     <CardHeader className="cursor-pointer hover:bg-slate-50 transition-colors">
@@ -360,12 +363,15 @@ const ProgramDetail = () => {
                       
                       <h4 className="font-medium text-slate-900 mb-3">Detailed Eligibility Guidelines:</h4>
                       <div className="space-y-3">
-                        {enhancedData.eligibilitySimple.map((criterion, index) => (
+                        {enhancedData.eligibilitySimple.map((benefit, index) => (
                           <div key={index} className="flex items-start space-x-3">
                             <div className="w-6 h-6 bg-medicaps-blue text-white rounded-full flex items-center justify-center text-xs font-medium flex-shrink-0">
                               {index + 1}
                             </div>
-                            <span className="text-sm text-slate-700">{criterion}</span>
+                            <span className="text-sm text-slate-900">
+                              <span className="text-sm font-semibold text-black/95">{benefit.slice(0, benefit.indexOf(':')+1)}</span>{' '}
+                              {benefit.slice(benefit.indexOf(':')+1).trim()}
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -375,7 +381,7 @@ const ProgramDetail = () => {
               </Card>
 
               {/* Costs & Scholarships */}
-              <Card className="border-slate-200 shadow-lg">
+              <Card className="border-slate-200 shadow-lg rounded-2xl overflow-hidden">
                 <Collapsible open={expandedSections.costs} onOpenChange={() => toggleSection('costs')}>
                   <CollapsibleTrigger asChild>
                     <CardHeader className="cursor-pointer hover:bg-slate-50 transition-colors">
@@ -434,7 +440,7 @@ const ProgramDetail = () => {
               </Card>
 
               {/* Accommodation Options */}
-              <Card className="border-slate-200 shadow-lg">
+              <Card className="border-slate-200 shadow-lg rounded-2xl overflow-hidden">
                 <Collapsible open={expandedSections.accommodation} onOpenChange={() => toggleSection('accommodation')}>
                   <CollapsibleTrigger asChild>
                     <CardHeader className="cursor-pointer hover:bg-slate-50 transition-colors">
@@ -450,9 +456,12 @@ const ProgramDetail = () => {
                   <CollapsibleContent>
                     <CardContent className="pt-0 pb-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                        {enhancedData.accommodation.map((option, index) => (
+                        {enhancedData.accommodation.map((benefit, index) => (
                           <div key={index} className="p-4 border border-slate-200 rounded-lg hover:bg-slate-50 transition-colors">
-                            <p className="text-sm text-slate-700">{option}</p>
+                            <span className="text-sm text-slate-900">
+                              <span className="text-sm font-semibold text-black/95">{benefit.slice(0, benefit.indexOf(':')+1)}</span>{' '}
+                              {benefit.slice(benefit.indexOf(':')+1).trim()}
+                            </span>
                           </div>
                         ))}
                       </div>
@@ -466,10 +475,10 @@ const ProgramDetail = () => {
           {/* Sidebar */}
           <div className="lg:col-span-1 space-y-6">
             {/* Apply Now Card */}
-            <Card className="border-medicaps-blue shadow-lg sticky top-4">
-              <CardHeader className="bg-gradient-to-r from-medicaps-blue to-medicaps-red text-white text-center">
+            <Card className="border-medicaps-blue shadow-lg rounded-2x1 overflow-hidden">
+              <CardHeader className="bg-gradient-to-r from-medicaps-blue to-medicaps-red sticky top-4 rounded-t-2x1 z-10 text-black text-center">
                 <CardTitle className="text-xl font-metropolis">Ready to Apply?</CardTitle>
-                <CardDescription className="text-blue-100">
+                <CardDescription className="text-slate-900">
                   Start your international journey today
                 </CardDescription>
               </CardHeader>
