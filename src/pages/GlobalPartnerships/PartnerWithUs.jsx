@@ -107,7 +107,7 @@ const PartnerWithUs = () => {
                         <FormItem>
                           <FormLabel>First Name *</FormLabel>
                           <FormControl>
-                            <Input {...field} />
+                            <Input  {...field} placeholder="Your First Name"/>
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -120,7 +120,7 @@ const PartnerWithUs = () => {
                         <FormItem>
                           <FormLabel>Last Name *</FormLabel>
                           <FormControl>
-                            <Input {...field} />
+                            <Input  {...field} placeholder="Your Last Name"/>
                           </FormControl>
                           <FormMessage />
                         </FormItem>
@@ -134,7 +134,7 @@ const PartnerWithUs = () => {
                       <FormItem>
                         <FormLabel>Email Address *</FormLabel>
                         <FormControl>
-                          <Input type="email" {...field} />
+                          <Input type="email" {...field} placeholder="Your Email Address" />
                         </FormControl>
                         <FormMessage />
                       </FormItem>
