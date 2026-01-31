@@ -247,10 +247,13 @@ const ProgramDetail = () => {
             {/* Partner University */}
             <Card className="border-slate-200 shadow-lg rounded-2xl overflow-hidden">
               <CardHeader className="bg-gradient-to-r from-medicaps-red to-medicaps-red /80 text-white">
-                <CardTitle className="text-black font-semibold test-xl Metropolis flex items-center">
-                  <GraduationCap className="h-6 w-6 mr-3" />
+                <h2 className="text-black font-semibold test-3xl leading-tight Metropolis flex items-center"
+                  style={{fontSize:"24px", fontWeight:700}}
+            
+                >
+                  <GraduationCap className="h-8 w-8 mr-3" />
                   Partner University
-                </CardTitle>
+                </h2>
               </CardHeader>
               <CardContent className="p-8">
                 <h3 className="text-xl font-semibold text-slate-900 mb-4">{program.partnerUniversity}</h3>
@@ -473,10 +476,10 @@ const ProgramDetail = () => {
           </div>
 
           {/* Sidebar */}
-          <div className="lg:col-span-1 space-y-6">
+          <div className="py-6 px-6">
             {/* Apply Now Card */}
             <Card className="border-medicaps-blue shadow-lg rounded-2x1 overflow-hidden">
-              <CardHeader className="bg-gradient-to-r from-medicaps-blue to-medicaps-red sticky top-4 rounded-t-2x1 z-10 text-black text-center">
+              <CardHeader className="bg-gradient-to-r from-medicaps-blue to-medicaps-red rounded-t-2x1 z-10 text-black text-center">
                 <CardTitle className="text-xl font-metropolis">Ready to Apply?</CardTitle>
                 <CardDescription className="text-slate-900">
                   Start your international journey today

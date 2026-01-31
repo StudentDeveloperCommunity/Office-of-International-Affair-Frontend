@@ -17,7 +17,7 @@ const Footer = () => {
                   e.target.src = "https://via.placeholder.com/100x40/ffffff/1e40af?text=MEDICAPS";
                 }}
               />
-              <Globe className="h-6 w-6 text-blue-400" />
+              
             </div>
             <h3 className="text-xl font-bold">Medicaps University</h3>
             <p className="text-slate-300 text-sm leading-relaxed">
@@ -32,7 +32,10 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-blue-400">Quick Links</h3>
+            <h3 className="flex items-center gap-2 text-lg font-semibold text-blue-400">
+              <Globe className="h-5 w-5 text-blue-400" />
+              Quick Links
+            </h3>
             <ul className="space-y-2">
               <li>
                 <a href="https://www.medicaps.ac.in" target="_blank" rel="noopener noreferrer" 
